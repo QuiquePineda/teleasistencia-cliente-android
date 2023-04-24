@@ -2,7 +2,17 @@ package com.example.teleappsistencia.utilidades;
 
 public class Constantes {
     /* Direcciones */
-    public static final String DIRECCION_WEBSOCKET = "ws://api-rest.teleasistencia.iesvjp.es/ws/socket-server/";
+
+    /* Se utiliza:
+     * "http://localhost:8000/" con dispositivos físicos
+     * con el emulador se ha de utilizar "http://10.0.2.2:8000/"
+     * En producción (1): http://api-rest-teleasistencia.iesvjp.es/
+     *
+     * (1) en próxima convocatoria se añadirá conexión mediante https */
+    public static final String API_BASE_URL = "http://10.0.2.2:8000/";
+
+    //public static final String DIRECCION_WEBSOCKET = "ws://api-rest-teleasistencia.iesvjp.es/ws/socket-server/";
+    public static final String DIRECCION_WEBSOCKET = "ws://10.0.2.2:8000/ws/socket-server/";
 
     /* Constantes comunes */
     public final static String BEARER_ESPACIO = "Bearer ";
@@ -59,20 +69,12 @@ public class Constantes {
     public static final String ERROR_DIRECCION_VACIO = "La dirección es obligatoria.";
     public static final String ERROR_CODIGO_POSTAL_VACIO = "El código postal es obligatorio.";
 
-    /**
-     * Constantes de la API.
-     */
-
-    /* Se utiliza:
-         * "http://localhost:8000/" con dispositivos físicos
-         * con el emulador se ha de utilizar "http://10.0.2.2:8000/"
-         * En producción (1): http://api-rest.teleasistencia.iesvjp.es/
-         *
-         * (1) en próxima convocatoria se añadirá conexión mediante https */
-    public static final String API_BASE_URL = "http://api-rest.teleasistencia.iesvjp.es/";
     public static final String TOKEN_BEARER = "Bearer ";
     public static final String FORMATEADOR_API = "yyyy-MM-dd'T'HH:mm:ssZ";
 
+    /**
+     * Constantes de la API.
+     */
 
     /**
      * Constantes de autorización.
